@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAANG Stock Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FAANG Stock Predictor</h1>
+            <p>Next-day closing price forecasts using AI</p>
+        </header>
+
+        <div class="prediction-form">
+            <select id="ticker-select" class="form-control">
+                <option value="Amazon">Amazon (AMZN)</option>
+                <option value="Apple">Apple (AAPL)</option>
+                <option value="Facebook">Facebook (META)</option>
+                <option value="Google">Google (GOOGL)</option>
+                <option value="Netflix">Netflix (NFLX)</option>
+            </select>
+
+            <div class="chart-container">
+                <canvas id="history-chart"></canvas>
+            </div>
+
+            <button id="predict-btn" class="btn">Predict Tomorrow's Price</button>
+            
+            <div class="result">
+                <h3>Prediction: <span id="prediction-result">-</span></h3>
+                <p id="prediction-meta"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
